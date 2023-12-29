@@ -12,3 +12,9 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.card {
+    border: 2px solid red;
+    width: max-content;
+    padding: 1rem;
+}
