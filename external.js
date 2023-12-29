@@ -45,7 +45,6 @@ add.addEventListener("click", ()=>{
 });
 
 dialog.addEventListener("close", ()=>{
-    for (item of myLibrary){
-        addBooks(item);
-    }
+    const lastAdded = myLibrary.length - 1;
+    addBooks(myLibrary[lastAdded]);
 });
