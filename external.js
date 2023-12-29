@@ -18,26 +18,38 @@ function Book(name, author, pages) {
 
 function addBooks(item){
     const bookCard = document.createElement('div');
-        const title = document.createElement('p');
-        const author = document.createElement('p');
-        const pages = document.createElement('p');
-        const deleteButton = document.createElement('button');
+    const title = document.createElement('p');
+    const author = document.createElement('p');
+    const pages = document.createElement('p');
+    const deleteButton = document.createElement('button');
 
-        bookCard.classList.add('card');
+    bookCard.classList.add('card');
 
-        title.textContent = `Title: ${item.title}`;
-        author.textContent = `Author: ${item.author}`;
-        pages.textContent = `Pages: ${item.pages}`;
-        deleteButton.textContent = 'Delete';
+    title.textContent = `Title: ${item.title}`;
+    author.textContent = `Author: ${item.author}`;
+    pages.textContent = `Pages: ${item.pages}`;
+    deleteButton.textContent = 'Delete';
 
-        deleteButton.setAttribute('data-index', item.title);
-        
-        bookCard.appendChild(title);
-        bookCard.appendChild(author);
-        bookCard.appendChild(pages);
-        bookCard.appendChild(deleteButton);
-        books.appendChild(bookCard);
+    deleteButton.setAttribute('data-index', item.title);
+    
+    bookCard.appendChild(title);
+    bookCard.appendChild(author);
+    bookCard.appendChild(pages);
+    bookCard.appendChild(deleteButton);
+    books.appendChild(bookCard);
 
+    deleteButton.addEventListener('click', ()=>{
+        let counter = 0;
+
+        for (each of myLibrary){
+            if (each.title === item.title){
+                myLibrary.splice(counter, 1);
+            }
+            counter++;
+        }
+
+        console.log(myLibrary);
+    })
 }
 
 addButton.addEventListener("click", ()=>{
@@ -52,4 +64,5 @@ add.addEventListener("click", ()=>{
 dialog.addEventListener("close", ()=>{
     const lastAdded = myLibrary.length - 1;
     addBooks(myLibrary[lastAdded]);
+    console.log(myLibrary);
 });
