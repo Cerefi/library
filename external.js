@@ -29,6 +29,8 @@ function addBooks(item){
         author.textContent = `Author: ${item.author}`;
         pages.textContent = `Pages: ${item.pages}`;
         deleteButton.textContent = 'Delete';
+
+        deleteButton.setAttribute('data-index', item.title);
         
         bookCard.appendChild(title);
         bookCard.appendChild(author);
