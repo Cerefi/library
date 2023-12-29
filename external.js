@@ -44,6 +44,7 @@ function addBooks(item){
         for (each of myLibrary){
             if (each.title === item.title){
                 myLibrary.splice(counter, 1);
+                books.removeChild(bookCard);
             }
             counter++;
         }
