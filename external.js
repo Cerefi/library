@@ -1,8 +1,8 @@
 const add = document.querySelector('#add');
 const addButton = document.querySelector('#addButton');
-const bookTitle = document.querySelector('#bookTitle');
 const bookAuthor = document.querySelector('#bookAuthor');
 const bookPages = document.querySelector('#bookPages');
+const bookTitle = document.querySelector('#bookTitle');
 const books = document.querySelector('.books');
 const card = document.querySelector(".card");
 const dialog = document.querySelector('#dialog');
@@ -21,16 +21,19 @@ function addBooks(item){
         const title = document.createElement('p');
         const author = document.createElement('p');
         const pages = document.createElement('p');
+        const deleteButton = document.createElement('button');
 
         bookCard.classList.add('card');
 
         title.textContent = `Title: ${item.title}`;
         author.textContent = `Author: ${item.author}`;
         pages.textContent = `Pages: ${item.pages}`;
+        deleteButton.textContent = 'Delete';
         
         bookCard.appendChild(title);
         bookCard.appendChild(author);
         bookCard.appendChild(pages);
+        bookCard.appendChild(deleteButton);
         books.appendChild(bookCard);
 
 }
