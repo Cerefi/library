@@ -22,12 +22,14 @@ function addBooks(item){
     const author = document.createElement('p');
     const pages = document.createElement('p');
     const deleteButton = document.createElement('button');
+    const readNotRead = document.createElement('button');
 
     bookCard.classList.add('card');
 
     title.textContent = `Title: ${item.title}`;
     author.textContent = `Author: ${item.author}`;
     pages.textContent = `Pages: ${item.pages}`;
+    readNotRead.textContent = `${item.read}`;
     deleteButton.textContent = 'Delete';
 
     deleteButton.setAttribute('data-index', item.title);
@@ -36,6 +38,7 @@ function addBooks(item){
     bookCard.appendChild(author);
     bookCard.appendChild(pages);
     bookCard.appendChild(deleteButton);
+    bookCard.appendChild(readNotRead);
     books.appendChild(bookCard);
 
     deleteButton.addEventListener('click', ()=>{
