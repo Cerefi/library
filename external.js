@@ -53,7 +53,16 @@ function addBooks(item){
         }
 
         console.log(myLibrary);
-    })
+    });
+
+    readNotRead.addEventListener('click', ()=>{
+        if (readNotRead.textContent === 'Not Read'){
+            readNotRead.textContent = 'Read';
+        }
+        else{
+            readNotRead.textContent = 'Not Read';
+        }
+    });
 }
 
 addButton.addEventListener("click", ()=>{
