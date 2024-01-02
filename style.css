@@ -7,6 +7,33 @@ body {
     padding: 0;
 }
 
+header {
+    background-color: rgb(43, 43, 82);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.header__text {
+    font-size: 2.5rem;
+    padding: 15px 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 35vw;
+    border: 2px solid yellow;
+}
+
+.main .container {
+    display: flex;
+    justify-content: center;
+}
+
 .input__container {
     display: flex;
     flex-direction: column;
