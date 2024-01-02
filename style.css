@@ -6,10 +6,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
 }
 
 header {
-    background-color: rgb(43, 43, 82);
+    background-color: rgb(120, 120, 174);
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -20,19 +23,9 @@ header {
     padding: 15px 25px;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-
 .addButton__section {
-    border: 2px solid palevioletred;
-    width: 100%;
-    height: 8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* border: 2px solid green; */
+    margin: 1.5rem auto;
 }
 
 #addButton {
@@ -40,25 +33,31 @@ header {
     border-style: none;
     border-radius: 10px;
     padding: 5px 10px;
+    background-color: rgb(120, 120, 174);
+    color: white;
 }
 
 #addButton:hover {
     cursor: pointer;
-    background-color: rgb(43, 43, 82);
-    color: white;
+    background-color: rgb(66, 188, 131);
 }
 
 .container {
-    width: 35vw;
-    border: 2px solid yellow;
+    width: 80vw;
+    /* border: 2px solid yellow; */
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
 }
 
 .main .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-
-
 
 .input__container {
     display: flex;
@@ -66,8 +65,21 @@ header {
     justify-content: center;
 }
 
+.books {
+    height: 100%;
+    /* border: 2px solid deeppink; */
+    gap: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
 .card {
-    border: 2px solid red;
-    width: max-content;
+    background-color: rgb(66, 188, 131);
+    border-radius: 20px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    /* border: 2px solid red; */
     padding: 1rem;
 }
