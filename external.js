@@ -33,7 +33,8 @@ function addBooks(item){
     deleteButton.textContent = 'Delete';
 
     deleteButton.setAttribute('data-index', item.title);
-    deleteButton.classList.add('deleteButton');
+    deleteButton.classList.add('delete');
+    readNotRead.classList.add('readStatus');
     
     bookCard.appendChild(title);
     bookCard.appendChild(author);
@@ -58,7 +59,7 @@ function addBooks(item){
 
     readNotRead.addEventListener('click', ()=>{
         if (readNotRead.textContent === 'Not Read'){
-            readNotRead.textContent = 'Read';
+            readNotRead.textContent = 'Read ✓';
         }
         else{
             readNotRead.textContent = 'Not Read';

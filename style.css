@@ -28,7 +28,8 @@ header {
     margin: 1.5rem auto;
 }
 
-#addButton {
+#addButton,
+form button {
     font-size: 1.5rem;
     border-style: none;
     border-radius: 10px;
@@ -37,8 +38,11 @@ header {
     color: white;
 }
 
-#addButton:hover {
+button {
     cursor: pointer;
+}
+
+#addButton:hover {
     background-color: rgb(66, 188, 131);
 }
 
@@ -88,8 +92,40 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #b8dd58;
     border-style: none;
-    padding: 5px;
+    padding: 8px;
     border-radius: 10px;
+}
+
+.delete {
+    margin-right: 1rem;
+    min-width: 100px;
+    background-color: red;
+}
+
+.readStatus {
+    background-color: #b8dd58;
+    min-width: 100px;
+}
+
+dialog {
+    background-color: rgb(66, 188, 131);
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+form,
+input,
+form button {
+    font-size: 20px;
+}
+
+form button:hover {
+    background-color: #b8dd58;
+}
+
+input {
+    margin-bottom: .5rem;
+    border: none;
+    border-radius: 5px;
 }
