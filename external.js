@@ -33,6 +33,7 @@ function addBooks(item){
     deleteButton.textContent = 'Delete';
 
     deleteButton.setAttribute('data-index', item.title);
+    deleteButton.classList.add('deleteButton');
     
     bookCard.appendChild(title);
     bookCard.appendChild(author);
