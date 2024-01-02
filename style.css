@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 header {
@@ -22,6 +23,29 @@ header {
 .main {
     display: flex;
     justify-content: center;
+    height: 100%;
+}
+
+.addButton__section {
+    border: 2px solid palevioletred;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addButton {
+    font-size: 1.5rem;
+    border-style: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#addButton:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 82);
+    color: white;
 }
 
 .container {
@@ -33,6 +57,8 @@ header {
     display: flex;
     justify-content: center;
 }
+
+
 
 .input__container {
     display: flex;
