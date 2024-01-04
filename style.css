@@ -21,6 +21,7 @@ header {
 .header__text {
     font-size: 2.5rem;
     padding: 15px 25px;
+    text-align: center;
 }
 
 .addButton__section {
